@@ -1,0 +1,13 @@
+---
+interface Props {
+  alt: string;
+  route: string;
+
+}
+
+const {alt, route} = Astro.props;
+---
+
+<div>
+  <img src={route} alt={alt}>
+</div>

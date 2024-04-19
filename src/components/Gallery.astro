@@ -1,0 +1,33 @@
+---
+import estesDondeEstes from "@/images/projects/1.webp"
+import tierraPrometida from "@/images/projects/2.webp"
+import estoyCansado from "@/images/projects/6.webp"
+---
+
+<div class="gallery">
+  <img src={estesDondeEstes.src} alt="estesDondeEstes">
+  <img src={tierraPrometida.src} alt="tierraPrometida">
+  <img src={estoyCansado.src} alt="estoyCansado">
+</div>
+
+<style>
+  div{
+    display: flex;
+    width: 50rem;
+    height: 30rem;
+  }
+  img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+
+    &:hover {
+      cursor: pointer;
+      width: 30rem;
+      opacity: 1;
+      filter: contrast(120%);
+    }
+  }
+</style>

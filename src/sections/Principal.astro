@@ -17,13 +17,47 @@ import ButtonAboutWe from '@/components/ButtonAboutWe.astro'
     <ButtonAboutWe />
   </div>
   <div class="logo">
-    <img src="./logo.webp" alt="">
+    <img src="./logo.webp" alt="Logo8nortes">
   </div>
 </section>
 
 <style>
   img {
-    width: 10rem;
+    width: 30rem;
+    filter: drop-shadow(10px 10px 5px #54545435);
+  }
+
+  section {
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+    
+    .text {
+      width: 50rem;
+
+      display: flex;
+      flex-direction: column;
+      
+      text-wrap: balance;
+      h1 {
+        font-size: 5em;
+        margin-bottom: 0.5rem;
+
+      }
+      h2 {
+        font-size: 2em;
+        margin-bottom: 2.5rem;
+      }
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+    }
   }
 </style>
 

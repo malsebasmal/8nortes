@@ -3,12 +3,20 @@ import Layout from "@/layouts/Layout.astro"
 import Presentations from "@/sections/Presentations.astro"
 import Principal from "@/sections/Principal.astro"
 import Projects from "@/sections/Projects.astro"
+import NavBar from "@/components/NavBar.astro"
 ---
 
 <Layout title="8 nortes">
+	<!-- <NavBar /> -->
 	<main>
 		<Principal />
-		<Projects />
-		<Presentations />
+		<Projects  id="proyectos"/>
+		<Presentations id="presentaciones"/>
 	</main>
 </Layout>
+
+<style>
+	main {
+		padding: 0 1.5rem;
+	}
+</style>

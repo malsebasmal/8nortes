@@ -1,13 +1,36 @@
 ---
+const { id } = Astro.props
+
 import Gallery from "@/components/Gallery.astro";
 import ButtonMore from "@/components/ButtonMore.astro"
 ---
 
-<section>
+<section id={id}>
   <div>
     <h3>Fotos/Proyectos</h3>
     <Gallery />
     <ButtonMore />
   </div>
-
 </section>
+
+<style>
+  section {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h3 {
+      font-size: 3.5em;
+      margin-bottom: 2rem;
+    }
+  }
+</style>

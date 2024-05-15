@@ -1,22 +1,32 @@
 ---
-import Card from "@/components/Card.astro";
+const { id } = Astro.props
 
-import MuestraForo from "@/images/presentations/1Card.webp";
-import CorazonPollito from "@/images/presentations/2Card.webp";
-import TallerCollege from "@/images/presentations/3Card.webp";
-import CinePiola from "@/images/presentations/4Card.webp";
-import DiloImagenes from "@/images/presentations/5Card.webp";
-import CierreCultural from "@/images/presentations/6Card.webp";
+import GridPresentations from "@/components/GridPresentations.astro";
 ---
 
-<section>
+<section id={id}>
   <div>
-    <Card alt="Muestra de foro" route={MuestraForo.src}/>
-    <Card alt="Corazón de pollito" route={CorazonPollito.src}/>
-    <Card alt="Taller de college" route={TallerCollege.src}/>
-    <Card alt="CinePiola" route={CinePiola.src}/>
-    <Card alt="Dilo con imágenes" route={DiloImagenes.src}/>
-    <Card alt="Cierre cultural" route={CierreCultural.src}>
-    </div>
-  </section>
+    <h3>Presentaciones</h3>
+    <GridPresentations />
+  </div>
+</section>
 
+<style>
+  section {
+    margin-top: 6.25rem;
+    margin-bottom: 5rem;
+
+    width: 100%;
+    height: auto;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-size: 3.5em;
+      margin-bottom: 2rem;
+    }
+  }
+</style>

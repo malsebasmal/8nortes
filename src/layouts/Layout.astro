@@ -26,9 +26,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="div__center">
-			<slot />
-		</div>
+		<slot />
 	</body>
 </html>
 <style is:global>
@@ -38,5 +36,15 @@ import 'bootstrap/dist/css/bootstrap.css'
 	}
 	html, body {
 		font-family: var(--font-primary), system-ui, sans-serif;
+	}
+
+	body {
+		background-color: white;
+	background-image:  linear-gradient(#b8b8b888 1px, transparent 1px), linear-gradient(to right, #b8b8b888 1px, #ffffff 1px);
+	background-size: 20px 20px;
+
+
+		width: 100%;
+		height: auto;
 	}
 </style>

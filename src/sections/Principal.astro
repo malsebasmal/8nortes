@@ -1,18 +1,21 @@
 ---
-import ButtonAboutWe from '@/components/ButtonAboutWe.astro'
+const { id } = Astro.props
+
+import ButtonHaciendoPueblo from '@/components/ButtonHaciendoPueblo.astro'
 ---
 
 <header>
   <nav></nav>
 </header>
 
-<section>
+<section id={id}>
   <div class="text">
     <h1>8 nortes</h1>
     <h2>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis nemo excepturi ab explicabo eligendi exercitationem consequuntur fugiat ducimus voluptatem aliquid, reprehenderit optio. Quibusdam illum earum, sapiente libero exercitationem et vitae.
+      Es un <b>colectivo transdiciplinario</b> principalmente enfocado en la gestión cultural de proyectos visuales/sonoros <b>por el barrio y para el barrio</b>. Se situa en el lado <b>norte de la ciudad de Lima</b> y actualmente se encuentra desarrollando proyectos en articulación <b>con la casa cultural</b>
     </h2>
-    <ButtonAboutWe />
+    <ButtonHaciendoPueblo />
+    
   </div>
   <div class="logo">
     <img src="./logo.webp" alt="Logo8nortes">
@@ -21,8 +24,8 @@ import ButtonAboutWe from '@/components/ButtonAboutWe.astro'
 
 <style>
   img {
-    z-index: -1;
     width: 30rem;
+    width: clamp(25rem , 25vw, 35rem);
     filter: drop-shadow(10px 10px 5px #54545435);
   }
 
@@ -34,7 +37,7 @@ import ButtonAboutWe from '@/components/ButtonAboutWe.astro'
     justify-content: center;
     align-items: center;
 
-    gap: 5rem;
+    gap: 1rem;
     
     .text {
       width: 50rem;
@@ -43,20 +46,22 @@ import ButtonAboutWe from '@/components/ButtonAboutWe.astro'
       flex-direction: column;
       
       text-wrap: balance;
+      
       h1 {
-        font-size: 5em;
-        margin-bottom: 0.5rem;
-
+        font-size: 6em;
       }
       h2 {
         font-size: 2em;
-        margin-bottom: 2.5rem;
+        line-height: 2.5rem;
+        margin-bottom: 1.5rem;
       }
     }
-    .logo {
-      display: flex;
-      flex-direction: column;
-    }
   }
+/* 
+  @media (width <= 1000px ) {
+    section { 
+      flex-direction: column-reverse;
+    }
+  } */
 </style>
 

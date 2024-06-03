@@ -1,0 +1,38 @@
+---
+import Ubication from "@/images/Ubication.astro"
+---
+
+<a href="https://maps.app.goo.gl/iZbNddmeTo3XgMgg6" >
+  <Ubication /> Haciendo Pueblo
+</a>
+
+<style>
+  a {
+    font-family: var(--font-secondary);
+
+    background-color: white;
+    color: black;
+
+    width: 20rem;
+
+    padding: .625rem; 
+    margin-top: 8px;
+
+    font-size: 1.5em;
+
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: .3125rem;
+    border: solid .0625rem black;
+    box-shadow: 0 .125rem 0 #494a4b;
+
+    transform: rotate(-5deg);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+    &:active {
+      transform: translateY(.3125rem);
+    }
+  }
+  
+</style>

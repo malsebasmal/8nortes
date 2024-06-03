@@ -3,14 +3,14 @@ import { Navbar } from 'astro-bootstrap'
 import type { NavbarItemType } from "astro-bootstrap"
 
 	const items: NavbarItemType[] =  [
+		{ text: "8 nortes" , href: "#principal" },
 		{ text: "Proyectos" , href: "#proyectos" },
-		{ text: "Presentaciones" , href: "#presentaciones" },
-		{ text: "Quienes somos" , href: "" }
+		{ text: "Presentaciones" , href: "#presentaciones" }
 	]
 ---
 
 <Navbar class="navbar navbar-expand-lg bg-transparent position-fixed">
-  <div class="items container d-flex justify-content-center align-items-center">
+  <div class="items d-flex justify-content-center align-items-center">
     <Navbar.Items {items} class="gap-5" />
   </div>
 </Navbar>
@@ -34,5 +34,12 @@ import type { NavbarItemType } from "astro-bootstrap"
 
 		font-size: 1.5em;
 		font-weight: bold;
+	}
+
+
+	@media (width <= 1000px) {
+		.navbar{
+			display: none;
+		}
 	}
 </style>

@@ -1,20 +1,20 @@
 ---
-import estesDondeEstes from "@/images/projects/1.webp"
-import tierraPrometida from "@/images/projects/2.webp"
-import estoyCansado from "@/images/projects/6.webp"
+import estesDondeEstes from "@/images/projects/1.webp";
+import tierraPrometida from "@/images/projects/2.webp";
+import estoyCansado from "@/images/projects/6.webp";
 ---
 
 <div class="gallery">
-  <img src={estesDondeEstes.src} alt="estesDondeEstes">
-  <img src={tierraPrometida.src} alt="tierraPrometida">
-  <img src={estoyCansado.src} alt="estoyCansado">
+  <img src={estesDondeEstes.src} alt="estesDondeEstes" />
+  <img src={tierraPrometida.src} alt="tierraPrometida" />
+  <img src={estoyCansado.src} alt="estoyCansado" />
 </div>
 
 <style>
-  div{
+  div {
     display: flex;
-    width: 50rem;
-    height: 30rem;
+    width: clamp(18rem, 70vw, 50rem);
+    height: clamp(10rem, 50vw, 30rem);
     margin-bottom: 2rem;
     box-shadow: 10px 10px 5px #54545435;
   }
@@ -22,14 +22,41 @@ import estoyCansado from "@/images/projects/6.webp"
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
-    opacity: .9;
-    transition: .5s ease;
+    opacity: 0.9;
+    transition: 0.5s ease;
 
-    &:hover {
+    &:hover,
+    &:active {
       cursor: pointer;
       width: 30rem;
       opacity: 1;
       filter: contrast(120%);
+    }
+  }
+
+  @media (width <= 500px) {
+    img {
+      &:hover,
+      &:active {
+        width: 10rem;
+      }
+    }
+  }
+
+  @media (width >= 1000px) {
+    img {
+      &:hover,
+      &:active {
+        width: 30rem !important;
+      }
+    }
+  }
+  @media (width >= 500px) {
+    img {
+      &:hover,
+      &:active {
+        width: 20rem;
+      }
     }
   }
 </style>

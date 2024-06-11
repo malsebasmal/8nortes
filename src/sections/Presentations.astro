@@ -26,9 +26,15 @@ import GridPresentations from "@/components/GridPresentations.astro";
     align-items: center;
 
     h3 {
-      font-size: 3.5em;
+      font-size: clamp(2.49em, 10vw, 3.5em);
       padding-top: 5rem;
       margin-bottom: 2rem;
+    }
+  }
+  @media (width <= 1024px) {
+    section {
+      padding-top: 2rem;
+      height: auto
     }
   }
 </style>

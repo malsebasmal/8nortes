@@ -29,4 +29,22 @@ import TonyFest from "@/images/presentations/6Card.webp";
     place-content: center;
     gap: 2.5rem;
   }
+
+  @media (width <= 1024px) {
+    div{
+      grid-template-columns: repeat(2, 20rem);
+    }
+  }
+
+  @media (width <= 700px) {
+    div{
+      grid-template-columns: repeat(2, 15rem);
+    }
+  }
+
+  @media (width <= 500px) {
+    div{
+      grid-template-columns: repeat(1, 20rem);
+    }
+  }
 </style>

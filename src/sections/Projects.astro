@@ -29,8 +29,16 @@ import ButtonMore from "@/components/ButtonMore.astro"
     align-items: center;
     
     h3 {
-      font-size: 3.5em;
+      font-size: clamp(2.5em, 10vw, 3.5em);
       margin-bottom: 2rem;
     }
   }
+
+  @media (width <= 1000px) {
+    section {
+      height: auto;
+      margin-top: 5rem;
+    }
+  }
+
 </style>
